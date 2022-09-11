@@ -1,9 +1,12 @@
 # web_cam
 
+```
  pip install opencv-contrib-python
- 
+``` 
+
 views.py
 
+```
 import cv2
 from django.http import StreamingHttpResponse
 from django.shortcuts import render
@@ -59,8 +62,10 @@ def generate_frame():
             # 認証が完了したら
             print("save")
     capture.release()
+```
 
 #camera.html
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,9 +81,11 @@ def generate_frame():
 </div>
 </body>
 </html>
-
+```
 
 # urls
+```
 urlpatterns = [
     path('', views.video_feed_view(), name='video_feed'),
 ]
+```
